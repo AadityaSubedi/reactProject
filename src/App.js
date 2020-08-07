@@ -1,23 +1,27 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Logos from "./Logos/Logos";
-import {store} from "./Store/store";
-import Navlinks from "./Navlinks/Navlinks"
+import Logos from "./logos/Logos";
+import Navlinks from "./navlinks/Navlinks";
+import Profile from "./Profile/Profile";
 import './App.css';
-
 class  App extends Component {
   render() {
     return (
-      <React.Fragment>
-    <Logos logos= {store.logos}/>
-    <Navlinks content={store.nav}/>  
-     <Switch>  
-    <Route path ="/home" render= {() => <h1>home page </h1>} />
-    <Route path ="/profile" component = {Profile} />
-    <Route path ="/tab" render= {() => <h1>this page is under construction. </h1>} />
-    </Switch>
+     <div className="App">
+    <Logos />
+    <Navlinks />  
 
-</React.Fragment>
+     <Switch>  
+
+    <Route path ="/home" render= {() =><center><h1>Home page </h1></center> } />
+    <Route path ="/profile/:id" render= {(props)=><Profile id = {props.match.params.id}/>} />
+    <Route path ="/tab" render= {() => <center><h1>this page is under construction. </h1></center>} />
+    <Route path ="/new-profile" component = {Profile} />
+    </Switch>
+   
+
+
+    </div>
     ) 
 }
 }

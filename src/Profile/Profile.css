@@ -1,0 +1,72 @@
+.profile  {
+    text-align: center;
+
+}
+
+/* Split the screen in half */
+.split {
+  height:100%;
+  width: 50%;
+  display:inline-block;
+  }
+    /* Control the right side */
+  .left {
+    left: 0;
+
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+  
+
+  }
+  .image{
+   max-height:20em;
+   width:auto;
+  }
+
+  
+ 
+
+  .profile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.profile li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.profile a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile a:hover,
+.profile a:active {
+    color: #1a92f5;
+}
+
+.profile .inactive {
+  color: grey;
+  cursor: not-allowed;
+ 
+}
+.profile .header .title {
+font-size:3em;
+font-weight: bold;
+font-style: oblique;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .image {
+    max-width: 50%;
+    height: 25%;
+  }
+}

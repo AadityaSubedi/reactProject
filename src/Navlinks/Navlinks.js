@@ -1,18 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "../Navlinks/Navlinks.css";
+import {connect } from 'react-redux';
+import './Navlinks.css';
 
 
 const Navlinks = (props) =>
 {
     return (
-        <div className ="Nav">
+        <div className ="nav">
         <nav>
             <ul>
-           { props.content.map((obj) =>  <li><NavLink to={obj.to}>{obj.text}</NavLink></li>)}
+           { props.nav.map((obj) =>  <li key={obj.text}><NavLink to={obj.to}>{obj.text}</NavLink></li>)}
          </ul>
         </nav> 
         </div>  
         )
     }
-export default Navlinks ;
+
+
+
+    const mapStateToProps = (state)=>
+{
+   return {
+      nav: state.nav
+   };
+}
+export default connect(mapStateToProps)(Navlinks) ;

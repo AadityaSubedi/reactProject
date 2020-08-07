@@ -1,3 +1,6 @@
-img{
+.App img{
   padding-left : 2em;
+}
+.App {
+  font-family : Arial, Helvetica, sans-serif;
 }
