@@ -5,7 +5,7 @@ import logo2 from '../Assets/ioelogo.jpg';
 const initialState = {
     logo: [logo1, logo2],
     nav: [
-        {text:"Home", to : "/home"},
+        {text:"Home", to : "/"},
         {text:"Profile", to : "/profile/0"},
         {text:"tab", to : "/tab"},
         {text:"tab2", to : "/tab"}

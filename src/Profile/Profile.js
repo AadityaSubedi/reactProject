@@ -2,27 +2,32 @@ import React  from 'react';
 import {connect} from 'react-redux';
 import "./Profile.css";
 import { NavLink } from 'react-router-dom';
-import PerInfo from "./perInfo/PerInfo";
+import PerInfoRedux from "./perInfo/PerInfo";
+import {PerInfo} from "./perInfo/PerInfo";
+import Search from '../Search/Search';
 
 
-const Profile = (props)=>{
+export const Profile = (props)=>{
  
     let id = +props.id;
     const dataArray = props.dataArray;
     let data= dataArray[id];
 
-
+    // Disable the naviagtion to the next or previous profile if we reached the end.
     let prevResult = <NavLink to ={"/profile/" + (id-1) }>Prev Result</NavLink>;
     let nextResult = <NavLink to ={"/profile/" + (id+1) }>Next Result</NavLink>;
     prevResult =  !id ?<span className="inactive"> Prev Result </span> : prevResult;
     nextResult = id === dataArray.length -1 ? <span className="inactive">Next Result</span> : nextResult;
 
-    
+
 
     return (
         
        
-        <div className = "profile">
+        <div className = "Profile">
+                <Search/>
+              
+
 
         { (!data) ? <h2>Loading...</h2> :
         <div> 
@@ -31,7 +36,7 @@ const Profile = (props)=>{
                 <span className ="title"> {data["first_name"]+" " + data["last_name"]}</span>
                 <nav>
                     <ul>
-                    
+ 
                         <li> {prevResult} </li>
                         <li> {nextResult}</li>
                     </ul>
@@ -41,8 +46,9 @@ const Profile = (props)=>{
            
             <div className="split left">
             {/* render the personal informations */}
+           
             
-            <PerInfo id = {id}/>
+            {props.fromReduxStore? <PerInfoRedux id = {id} />:<PerInfo i = {id} data= {data}/> }
             
                       
             </div>
@@ -54,7 +60,7 @@ const Profile = (props)=>{
          
             </div>
            
-            <button  onClick ={()=>{}}>Add New Profile</button>
+            <button  ><NavLink to="/new-profile">Add New Profile</NavLink></button>
             </div>
            
         } 
@@ -75,6 +81,7 @@ const mapStateToProps = (state, ownProps)=>
    return {
       dataArray: state.apiResponse,
       ...ownProps,
+      fromReduxStore : true,
    };
 }
 

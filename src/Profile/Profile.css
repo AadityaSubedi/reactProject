@@ -1,4 +1,4 @@
-.profile  {
+.Profile  {
     text-align: center;
 
 }
@@ -29,7 +29,7 @@
   
  
 
-  .profile ul {
+  .Profile ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -37,27 +37,27 @@
     text-align: center;
 }
 
-.profile li {
+.Profile li {
     display: inline-block;
     margin: 20px;
 }
 
-.profile a {
+.Profile a {
     text-decoration: none;
     color: black;
 }
 
-.profile a:hover,
-.profile a:active {
+.Profile a:hover,
+.Profile a:active {
     color: #1a92f5;
 }
 
-.profile .inactive {
+.Profile .inactive {
   color: grey;
   cursor: not-allowed;
  
 }
-.profile .header .title {
+.Profile .header .title {
 font-size:3em;
 font-weight: bold;
 font-style: oblique;
@@ -70,3 +70,5 @@ font-style: oblique;
     height: 25%;
   }
 }
+
+

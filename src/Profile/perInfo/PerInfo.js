@@ -3,13 +3,33 @@ import "./PerInfo.css";
 import {connect} from "react-redux";
 
 
-const PerInfo  = (props)=>{
+export const PerInfo  = (props)=>{
+   
    var dataInfo =[];
 var data = props.data;
 
-for(var  key in data){
-   dataInfo.push(<p key={key}>{key+" : " + data[key]}</p>)
+
+const iterate = (obj) => {
+   Object.keys(obj).forEach(key => {
+      
+
+   if (typeof obj[key] === 'object') {
+      // unique number generator : Date.now() and  Math.random()  
+      // gives the higher degree of  uniquenes on multiplying both.
+
+     void(isNaN(key)? (dataInfo.push(<p key={Date.now()*Math.random()} > <b>{ key +": "}</b> </p>)): null);
+
+           iterate(obj[key])
+       }
+       else {
+         dataInfo.push(<p key={Date.now()*Math.random()} > <b>{ key +": "}</b> <i> {""+obj[key]}</i>  </p>)
+       }
+   })
 }
+
+iterate(data);
+
+
    
 return(<div className="dataInfo">{dataInfo}</div>)
 
