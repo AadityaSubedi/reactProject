@@ -31,7 +31,6 @@ import * as localStore from './LocalStore'
               name={localStore.rollNumber}
               id={localStore.rollNumber}
               type="number"
-              min="1"
               placeholder="61005"
               
             />
@@ -47,7 +46,8 @@ import * as localStore from './LocalStore'
               name={localStore.dob}
               id = {localStore.dob}
               type="date"   
-              min="2002-01-01"          
+              min={((new Date()).getFullYear()-100)+"-01-01"}
+              max ={(new Date()).getFullYear()+"-12-31"}      
             />
   
             {/* since uploading image to server isnt handled at this moment
@@ -64,17 +64,14 @@ import * as localStore from './LocalStore'
               label="Batch"
               name={localStore.batch}
               type="number"
-              min="1"
               placeholder="1"
             /> 
             
             <MyTextInput
-              label="Year"
+              label="Year(AD)"
               name={localStore.year}
               type="number"
-              min="1900"
-              max = "2099"
-              placeholder="2075"
+              placeholder="2018"
             />
   
             <MySelect label="Faculty" name={localStore.faculty}>

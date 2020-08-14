@@ -60,7 +60,7 @@ export const Profile = (props)=>{
          
             </div>
            
-            <button  ><NavLink to="/new-profile">Add New Profile</NavLink></button>
+            <NavLink to="/new-profile"> <button  >Add New Profile</button></NavLink>
             </div>
            
         } 

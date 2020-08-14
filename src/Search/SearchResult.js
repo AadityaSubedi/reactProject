@@ -61,7 +61,7 @@ const SearchResult =(props) => {
 
             {/*render the cards of the profile matching the query */}
             
-            {cardGenerator(props.query)}
+            {cardGenerator(props.query.toLowerCase())}
             
 
           

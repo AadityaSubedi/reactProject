@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import Logos from "./logos/Logos";
-import Navlinks from "./navlinks/Navlinks";
+import { Route, Switch } from 'react-router-dom';
+import Logos from "./Logos/Logos";
+import Navlinks from "./Navlinks/Navlinks";
 import ProfileRedux from "./Profile/Profile";
 import NewProfileForm from './NewProfileForm/NewProfileForm';
 import SearchResult from './Search/SearchResult';

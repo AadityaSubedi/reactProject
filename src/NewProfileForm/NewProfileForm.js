@@ -95,14 +95,15 @@ const NewProfileForm = () =>{
           }
         }
 
-
+// the required "attribute of validation" is commented out 
+// so that the testing would be easier
         validationSchema={Yup.object({
           [localStore.firstName]: Yup.string()
-            .max(15, "Must be 15 characters or less"),
-            // .required("Required"),
+            .max(15, "Must be 15 characters or less")
+            .required("Required"),
           [localStore.lastName]: Yup.string()
-            .max(20, "Must be 20 characters or less"),
-            // .required("Required"),
+            .max(20, "Must be 20 characters or less")
+            .required("Required"),
           
           [localStore.rollNumber]: Yup.number()
             .min(1,"Roll number is never < 1")
@@ -113,17 +114,16 @@ const NewProfileForm = () =>{
             // .required("Required"),
           [localStore.dob]: Yup.date(),
             // .required("Required"),
-          [localStore.avatar]: Yup.string(),
+          [localStore.avatar]: Yup.string().url(),
             // .required("Required"),
           [localStore.batch]: Yup.number()
             .min(1,"Batch number is never < 1"),
             // .required("Required"),
-          [localStore.year] : Yup.number(),
+          [localStore.year] : Yup.date().min((new Date()).getFullYear()-85).max((new Date()).getFullYear()),
             // .required("Required"),
           [localStore.faculty]: Yup.string()
             // specify the set of valid values for job type
-            // @see http://bit.ly/yup-mixed-oneOf
-            .oneOf(
+             .oneOf(
               ["BCT", "BEX", "BEL", "BCE", "BME","B. Arch"],
               "Invalid Job Type"),
             // .required("Required"),
@@ -134,23 +134,23 @@ const NewProfileForm = () =>{
           [localStore.phoneNo]: Yup.string()
           .matches(localStore.phoneRegExp,"Invalid phone number") ,
           
-          [localStore.fatherName]:Yup.string(),
-          [localStore.fatherAvatar]: Yup.string(),
-          [localStore.fatherAddress]:Yup.string(),
-          [localStore.fatherPhone]: Yup.number(),
+          // [localStore.fatherName]:Yup.string(),
+          // [localStore.fatherAvatar]: Yup.string(),
+          // [localStore.fatherAddress]:Yup.string(),
+          // [localStore.fatherPhone]: Yup.number(),
 
           [localStore.motherName]:Yup.string(),
-          [localStore.motherAvatar]: Yup.string(),
+          [localStore.motherAvatar]: Yup.string().url(),
           [localStore.motherAddress]:Yup.string(),
           [localStore.motherPhone]: Yup.number(),
 
           [localStore.uncleName]:Yup.string(),
-          [localStore.uncleAvatar]: Yup.string(),
+          [localStore.uncleAvatar]: Yup.string().url(),
           [localStore.uncleAddress]:Yup.string(),
           [localStore.unclePhone]: Yup.number(),
 
           [localStore.auntName]:Yup.string(),
-          [localStore.auntAvatar]: Yup.string(),
+          [localStore.auntAvatar]: Yup.string().url(),
           [localStore.auntAddress]:Yup.string(),
           [localStore.auntPhone]: Yup.number(),
 
