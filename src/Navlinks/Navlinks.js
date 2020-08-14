@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import {connect } from 'react-redux';
 import './Navlinks.css';
 
-
+// returns the JSX to render the navigation list.
+//  The information like: (label of navigation, linking to) are extracted from redux.
 const Navlinks = (props) =>
 {
     return (

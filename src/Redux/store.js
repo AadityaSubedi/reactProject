@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware, compose} from "redux";
 import reducer from "./reducer";
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'; // thunk is a middle-ware, here, we use it to run async code
 
 
 //async function
@@ -26,25 +26,16 @@ async function getApiData(dispatch)
 
 }
 
-//middle-ware
-const logger = (store)=>{
-    return next=>{
-        return action =>{
-            // Passing action to the reducer 
-            console.log(action);
-           const result = next(action);
-           return result; 
-        }
-    }
 
 
-}
+
+// }
 //To enable the redux-dev-tool *optional*
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 //create the store
-export const store = createStore(reducer, composeEnhancers(applyMiddleware(logger, thunk)));
+export const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 
 
@@ -69,5 +60,5 @@ const InitStoreWithAsyncData = () => {
       
     // {type : "InitStoreWithAsyncData"}
 
-
+// redefine the state of the redux, including the data fetched from server
 store.dispatch (InitStoreWithAsyncData());

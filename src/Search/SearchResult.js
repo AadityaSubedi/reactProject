@@ -19,7 +19,7 @@ var matchingUsers = storedDataArray.filter((key)=>{
 
 if (matchingUsers.length )
 {
-//for each matching users return a card containing the basic info
+//for each matching users return a "card" containing the basic info
         return matchingUsers.map((key)=>{
             var index = storedDataArray.indexOf(key);
             return (

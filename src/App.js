@@ -17,8 +17,8 @@ class  App extends Component {
     <Navlinks /> 
 
 
-     <Switch>  
-       
+      {/* routes to the corresponding component accordingly */}
+     <Switch>    
 
     <Route path ="/" exact render= {()=> <center><h1>Home page </h1></center> } />
     <Route path ="/profile/:id" render= {(props)=><ProfileRedux id = {props.match.params.id}/>} />

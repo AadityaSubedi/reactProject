@@ -1,6 +1,9 @@
+//localStorage: variable to be used in form creation process
+
+
 export const phoneRegExp=   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
-// defines basic frame of nested structure as in API response so that tha data 
+// defines basic frame of nested structure (as in API response) so that tha data 
 // in the localStorage has the same structure as in API response.
 export const apiResponseStruct = {
   first_name: "",
@@ -64,6 +67,8 @@ export const apiResponseStruct = {
 
 
  
+// This makes code dynamic
+// The variable is suppose to store the value for the "name" attribute in each "input" field.
 export const firstName = "first_name";
 export const lastName = "last_name";
 export const rollNumber= "roll_number";

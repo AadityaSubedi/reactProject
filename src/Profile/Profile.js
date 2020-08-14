@@ -77,7 +77,7 @@ export const Profile = (props)=>{
 }
 
 
-
+//extract the data from the redux store
 const mapStateToProps = (state, ownProps)=>
 {
    return {

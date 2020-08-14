@@ -4,7 +4,7 @@
 
 }
 
-/* The following code is copied from the documentation of FORMIK */
+/* The following code related to Form and Formfield is copied from the documentation of FORMIK */
 :root  {
     --gray-900: #1a202c;
     --gray-800: #2d3748;
@@ -221,20 +221,6 @@ input[type=number] {
     }
   }
   
-  input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 50%;
-    border: 2px solid var(--gray-300);
-    height: 1rem;
-    width: 1rem;
-    margin-right: 0.5rem;
-    align-self: center;
-    justify-content: center;
-    position: relative;
-    display: flex;
-  }
   
   @media (prefers-color-scheme: dark) {
     input[type="radio"] {
@@ -248,29 +234,14 @@ input[type=number] {
     }
   }
   
-  input[type="radio"]:checked {
-    border: 2px solid var(--gray-700);
-  }
-  
-  input[type="radio"]:focus-visible,
-  input[type="radio"]:checked:focus-visible {
-    border-color: var(--focus-ring-color);
-  }
-  
-  @media (prefers-color-scheme: dark) {
+ 
+    @media (prefers-color-scheme: dark) {
     input[type="radio"]:checked {
       border: 2px solid white;
     }
   }
   
-  input[type="radio"]:checked::before {
-    content: "";
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
-    background-color: var(--gray-700);
-    align-self: center;
-    border-radius: 50%;
-  }
+ 
   
   @media (prefers-color-scheme: dark) {
     input[type="radio"]:checked::before {

@@ -1,7 +1,7 @@
 import logo1 from '../Assets/logo.png';
 import logo2 from '../Assets/ioelogo.jpg';
 
-
+//initial data to be stored when the app begins
 const initialState = {
     logo: [logo1, logo2],
     nav: [

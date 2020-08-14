@@ -5,18 +5,20 @@ import './Search.css';
 
 class Search extends Component {
  state = {
-   query: '',
- }
+            query: '',
+              }
 
+
+// update the state with the keyword entered in search field/
  clickHandler = ()=>{ 
-     var value =  document.getElementById('InputSearch').value;
-     if (value){ 
-        this.setState({
-            query: value 
-   
-        })
-    }
-}
+                  var value =  document.getElementById('InputSearch').value;
+                  if (value){ 
+                      this.setState({
+                          query: value 
+                
+                      })
+              }
+          }
 
 
 

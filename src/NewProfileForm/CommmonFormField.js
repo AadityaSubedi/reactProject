@@ -1,7 +1,9 @@
 import React from 'react';
-
 import {MyTextInput} from './StyledField';
 
+
+//returns the form fields 
+// this code will be then used since parents and guardians field have similar structure
 const CommonFormField = (props)=>{
     return (
       <>

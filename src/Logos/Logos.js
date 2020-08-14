@@ -1,9 +1,11 @@
 import React from 'react';
 import './Logos.css';
 import {connect} from 'react-redux';
+
+
+// returns the JSX to display the "logos" whose reference to actual file is stored in the redux
 const Logos = (props) => 
 {
-  
     return (
         <div className="Logos" >
         <img src = {props.logo[0]} style = {{height:"10%", width: "10%"}} alt="logo.png"  />

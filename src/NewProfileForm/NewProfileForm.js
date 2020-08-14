@@ -12,7 +12,7 @@ import * as localStore from './LocalStore';
 // all the task needed for form.
 
 
-
+// this is the javascript builtin yield function
 function * generateStrings(){
   yield "father";
   yield "mother";
@@ -21,8 +21,10 @@ function * generateStrings(){
 }
 
 
+// copy each value of the "values" varibale into "target" without distorting the structure 
+// of target object.
 
- const copyValues= (target, values) => {
+const copyValues= (target, values) => {
    var pre ={value:""};
    var prefix = generateStrings();
    (function iterate(obj){
@@ -47,7 +49,7 @@ function * generateStrings(){
 
 
 
-
+// creates the form for the newProfile 
 const NewProfileForm = () =>{
     return(
       <div className ="newProfile">
@@ -162,14 +164,17 @@ const NewProfileForm = () =>{
           var arrayOfUsers =[];
            //Performs the deep copying of the Object
            var finalJsonData = JSON.parse(JSON.stringify(localStore.apiResponseStruct));
-           //copy form's value to "finalJsonData".
+           //copy form's value to "finalJsonData"  without distorting the structure.
             copyValues(finalJsonData,values);
-          
+
+          //stores the data extracted from form in an array format in local storage
           arrayOfUsers = localStorage.length ? JSON.parse (localStorage.getItem("users")):[];
           arrayOfUsers.push(finalJsonData);
         
           localStorage.setItem("users", JSON.stringify(arrayOfUsers));   
-          
+
+
+          // clears the form field on clicking the "Submit button"
           resetForm({values : ""});
 
 
