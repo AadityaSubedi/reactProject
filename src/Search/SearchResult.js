@@ -43,6 +43,8 @@ if (matchingUsers.length )
            return (
                <>
             <h2>OOPS!</h2> <h3>Trying using next keyword that best matches the users</h3>
+            <h4> Hint: This message is showing because we are in debugging phase :</h4>
+            <em> use the first name or last name of the users stored in Local Storage for searching</em>
            </>
            ); 
        }    
