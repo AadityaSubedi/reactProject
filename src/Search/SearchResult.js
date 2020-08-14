@@ -7,6 +7,7 @@ import Search from './Search';
 const cardGenerator = (query) => {
     //retrieve the data from local storage;
 var storedDataArray = JSON.parse (localStorage.getItem("users"));
+if(!storedDataArray) {return <h3> Local storage is empty </h3>}
 
 //generates the array of only those users that has matching "query"
 
