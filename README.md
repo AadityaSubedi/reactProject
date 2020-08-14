@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Note: For testing purpose, populate the LocalStorage on your own by "creating a new Profile".
+
 ## Available Scripts
 
 In the project directory, you can run:
