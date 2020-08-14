@@ -1,6 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### How to Use the cloned files
+1) Run `npm install` inside the cloned repository
+2) Run `npm start` to view the project
 
-## Note: For testing purpose, populate the LocalStorage on your own by "creating a new Profile".
+
+#### Note: For testing purpose, populate the LocalStorage on your own by navigating to Profile > Add new Profile".
 
 ## Available Scripts
 
