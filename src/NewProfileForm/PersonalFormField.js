@@ -50,7 +50,7 @@ import * as localStore from './LocalStore'
               max ={(new Date()).getFullYear()+"-12-31"}      
             />
   
-            {/* since uploading image to server isnt handled at this moment
+            {/* since uploading image to server isn't handled at this moment
             this "avatar" field is thus supposed to get the URL to image */}
             
             <MyTextInput

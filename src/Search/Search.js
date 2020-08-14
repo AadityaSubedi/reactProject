@@ -24,6 +24,8 @@ class Search extends Component {
    return (
         <div className = "Search">
 
+      {/* redirects to result page  if the user has entered 
+      // the keywords for querySearch */}
         {this.state.query ?<Redirect to ={"/search/"+this.state.query}/>: null}
        
 

@@ -8,7 +8,7 @@ export const PerInfo  = (props)=>{
    var dataInfo =[];
 var data = props.data;
 
-
+// this function is targeted to transverse through each element in the nested Object(like our API response)
 const iterate = (obj) => {
    Object.keys(obj).forEach(key => {
       
