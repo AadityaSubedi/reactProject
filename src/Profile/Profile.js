@@ -6,7 +6,9 @@ import PerInfoRedux from "./perInfo/PerInfo";
 import {PerInfo} from "./perInfo/PerInfo";
 import Search from '../Search/Search';
 
-
+// the same Profile component is used for rendering the data from both 
+// 1.API response(Profile is connected to redux store(default export)) and
+// 2.LocalStorage(Profile is exported as "named export")
 export const Profile = (props)=>{
  
     let id = +props.id;

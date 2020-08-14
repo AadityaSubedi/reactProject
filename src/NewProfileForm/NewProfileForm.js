@@ -134,10 +134,10 @@ const NewProfileForm = () =>{
           [localStore.phoneNo]: Yup.string()
           .matches(localStore.phoneRegExp,"Invalid phone number") ,
           
-          // [localStore.fatherName]:Yup.string(),
-          // [localStore.fatherAvatar]: Yup.string(),
-          // [localStore.fatherAddress]:Yup.string(),
-          // [localStore.fatherPhone]: Yup.number(),
+          [localStore.fatherName]:Yup.string(),
+          [localStore.fatherAvatar]: Yup.string().url(),
+          [localStore.fatherAddress]:Yup.string(),
+          [localStore.fatherPhone]: Yup.number(),
 
           [localStore.motherName]:Yup.string(),
           [localStore.motherAvatar]: Yup.string().url(),
@@ -162,11 +162,12 @@ const NewProfileForm = () =>{
           var arrayOfUsers =[];
            //Performs the deep copying of the Object
            var finalJsonData = JSON.parse(JSON.stringify(localStore.apiResponseStruct));
-           //copy form's value to "finalJsonData"
-           copyValues(finalJsonData,values);
+           //copy form's value to "finalJsonData".
+            copyValues(finalJsonData,values);
           
           arrayOfUsers = localStorage.length ? JSON.parse (localStorage.getItem("users")):[];
           arrayOfUsers.push(finalJsonData);
+        
           localStorage.setItem("users", JSON.stringify(arrayOfUsers));   
           
           resetForm({values : ""});
