@@ -139,22 +139,26 @@ const NewProfileForm = () =>{
           [localStore.fatherName]:Yup.string(),
           [localStore.fatherAvatar]: Yup.string().url(),
           [localStore.fatherAddress]:Yup.string(),
-          [localStore.fatherPhone]: Yup.number(),
+          [localStore.fatherPhone]: Yup.string()
+          .matches(localStore.phoneRegExp,"Invalid phone number") ,
 
           [localStore.motherName]:Yup.string(),
           [localStore.motherAvatar]: Yup.string().url(),
           [localStore.motherAddress]:Yup.string(),
-          [localStore.motherPhone]: Yup.number(),
+          [localStore.motherPhone]: Yup.string()
+          .matches(localStore.phoneRegExp,"Invalid phone number") ,
 
           [localStore.uncleName]:Yup.string(),
           [localStore.uncleAvatar]: Yup.string().url(),
           [localStore.uncleAddress]:Yup.string(),
-          [localStore.unclePhone]: Yup.number(),
+          [localStore.unclePhone]: Yup.string()
+          .matches(localStore.phoneRegExp,"Invalid phone number") ,
 
           [localStore.auntName]:Yup.string(),
           [localStore.auntAvatar]: Yup.string().url(),
           [localStore.auntAddress]:Yup.string(),
-          [localStore.auntPhone]: Yup.number(),
+          [localStore.auntPhone]: Yup.string()
+          .matches(localStore.phoneRegExp,"Invalid phone number") ,
 
           
 

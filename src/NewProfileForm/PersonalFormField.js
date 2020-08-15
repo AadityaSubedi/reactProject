@@ -96,7 +96,7 @@ import * as localStore from './LocalStore'
               label="Phone No."
               name={localStore.phoneNo}
               id = {localStore.phoneNo}
-              type="number"
+              type="text"
               placeholder="+97798XXXXXXXX"
             />
       </>

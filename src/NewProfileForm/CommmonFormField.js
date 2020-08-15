@@ -33,7 +33,7 @@ const CommonFormField = (props)=>{
               label="Phone"
               name={props.value+ "phone"}
               id = {props.value+ "phone"}
-              type="number"
+              type="text"
               placeholder="+97798XXXXXXXX"
             />
             </>

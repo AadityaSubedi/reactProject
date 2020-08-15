@@ -1,7 +1,7 @@
 //localStorage: variable to be used in form creation process
 
 
-export const phoneRegExp=   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+export const phoneRegExp=   /^(\+977)?9[78](\d{8})$/
 
 // defines basic frame of nested structure (as in API response) so that tha data 
 // in the localStorage has the same structure as in API response.
